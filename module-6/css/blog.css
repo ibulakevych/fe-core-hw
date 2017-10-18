@@ -1,7 +1,7 @@
 * {
     color: black;
     font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 0;
+    /* font-size: 0; */
     line-height: 0;
     -webkit-padding-start: 0px;
 }
@@ -9,19 +9,23 @@ li {
     list-style-type: none;
 }
 a {
+    text-decoration: none;
+}
+header a {
     font-family: 'Pathway Gothic One', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
 }
 h2 { 
     /* title 'top destinition' */
+    font-family: 'Pathway Gothic One', sans-serif;
     color: #263555;
     font-size: 32px;
     text-transform: uppercase;
     font-weight: normal;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-    margin-bottom: 58px;
+    margin-bottom: 45px;
 }
 h4 {
     font-family: Arial, Helvetica, sans-serif;
@@ -39,6 +43,8 @@ p {
     line-height: 15px;
     color: #4e5050;
     margin-bottom: 13px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
 }
 header {
     width: 1024px;
@@ -212,10 +218,22 @@ article::after {
     margin-bottom: 48px;
     border-bottom: 1px solid #e4e4e4;
 }
-.aside li::before {
-    content: url(../img/li_arrow.png);    
+aside ul li a::before {
+    content: url(../img/li_arrow.png);
     float: left;
-    margin-right: 10px;
+    margin-right: 10px;    
+    width: 10px;
+    height: 7px;
+}
+aside ul > li a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 30px;
+    color: #263555;
+}
+aside ul {
+    margin-bottom: 57px;
 }
 .to-top {
     background-color: #38afe5;
@@ -233,6 +251,7 @@ article::after {
     /* margin: 10px auto; */
 }
 .to-top a {
+    text-decoration: none;
     width: 30px;
     height: 30px;
 }
@@ -242,12 +261,41 @@ article::after {
     clear: both;
 }
 footer {
+    /* display: flex; */
     background-color: #30455b;  
     width: 1024px;
     height: 133px;
+    padding: 45px 140px 0;
     margin: auto;
     box-sizing: border-box;
+    column-count: 4;
 }
+footer > a {
+    display: block;
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.contacts p:first-child {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.contacts > p, a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: none;
+    color: #fff;
+    
+}
+
 body {
     background-image: url('../img/bg.png');
 }
