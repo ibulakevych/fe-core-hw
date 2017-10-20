@@ -1,10 +1,10 @@
-* {
+/* * {
     color: black;
     font-family: 'Pathway Gothic One', sans-serif;
-    /* font-size: 0; */
+    font-size: 0;
     line-height: 0;
     -webkit-padding-start: 0px;
-}
+} */
 li {
     list-style-type: none;
 }
@@ -38,13 +38,13 @@ h4 {
     -webkit-margin-after: 0;
 }
 p {
+    /* display: block; */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     line-height: 15px;
     color: #4e5050;
     margin-bottom: 13px;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
+    
 }
 header {
     width: 1024px;
@@ -66,6 +66,7 @@ nav > ul > li > a:hover + ul {
     opacity: 1;
 }
 .navigation > li > a {
+    /* font-weight: normal; */
     color: #fff;
     font-size: 28px;
     font-weight: normal;
@@ -264,8 +265,8 @@ footer {
     /* display: flex; */
     background-color: #30455b;  
     width: 1024px;
-    height: 133px;
-    padding: 45px 140px 0;
+    /* height: 133px; */
+    padding: 45px 140px 30px;
     margin: auto;
     box-sizing: border-box;
     column-count: 4;
@@ -293,9 +294,19 @@ footer > a {
     line-height: 19px;
     text-transform: none;
     color: #fff;
-    
 }
 
+.social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+.social-links a:first-child {
+    background-image: url(../img/sprite_social.png);
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    filter: opacity(.7);
+}
 body {
     background-image: url('../img/bg.png');
 }
