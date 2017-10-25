@@ -57,7 +57,7 @@ header {
 }
 nav > ul > li {
     display: inline-block;
-    vertical-align: baseline;        
+    vertical-align: baseline;
 }
 nav > ul > li > a:hover + ul {
     display: initial;
@@ -70,6 +70,9 @@ nav > ul > li > a:hover + ul {
 }
 .navigation > li > a:hover {
     color: #263555;
+}
+.navigation > li > a:hover .drop-menu {
+    display: inherit;
 }
 .navigation > li:nth-child(2) {
     display: flex;
@@ -91,7 +94,7 @@ nav > ul > li > a:hover + ul {
     border-color: transparent transparent #fff transparent;
 }
 .drop-menu {
-    margin-top: 41px;
+    margin-top: 37px;
     width: 66px;
     height: 88px;
     position: absolute;
@@ -100,12 +103,13 @@ nav > ul > li > a:hover + ul {
     display: none;   
     background-color: white;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 16px;
     /* padding-bottom: 10px; */
     padding-left: 0px;
     box-sizing: border-box;
     border-radius:5px;
-   
+    z-index: 1;
+    
     /* position:relative;
     display:inline-block; */
     /* padding:10px;
@@ -114,6 +118,12 @@ nav > ul > li > a:hover + ul {
     margin-right:30px;
     text-align:left; */
 }
+.drop-menu:hover .navigation > li > a {
+    color: #263555;
+}
+/* .drop-menu:hover .drop-menu {
+    display: block;
+} */
 .drop-menu > li > a {
     color: #263555;
     /* font-family: 'Pathway Gothic One', sans-serif; */
@@ -124,15 +134,57 @@ nav > ul > li > a:hover + ul {
 .wrapper {
     width: 1024px;
     margin: 0 auto 0;
-    padding: 111px 60px 0;
+    padding: 97px 60px 0;
     background-color: #ffffff;
     box-sizing: border-box;
-    display: flex;
-    /* justify-content: space-around; */
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
     /* overflow: inherit; */
+    font-size: 0;
+}
+.gallery {
+    display: flex;
+    /* width: 904px; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.gallery-item {
+    width: 290px;
+    height: 155px;
+    position: relative;
+    margin-bottom: 40px;
 }
 
+.gallery-item > img:first-child {
+    width: 100%;
+    height: auto;
+}
+.gallery-item > img:nth-child(2) {
+    position: absolute;
+    left: 128px;
+    top: 60px;
+    opacity: 0;
+}
+.gallery-item:hover > img:first-child {
+    filter: brightness(50%);
+}
+.gallery-item:hover > img:nth-child(2) {
+    opacity: 1;
+}
 
+/* .wrapper > img {
+    display: inline-block;
+    position: relative;
+    margin: 0 13px 40px 0;
+}
+.wrapper > img:hover {
+    filter: brightness(50%);
+}
+.wrapper > img::after {
+    content: url(../img/zoom.png);
+    
+} */
 .to-top {
     background-color: #38afe5;
     width: 30px;
@@ -143,7 +195,7 @@ nav > ul > li > a:hover + ul {
     right: 13vw;
     box-sizing: border-box;
     vertical-align: baseline;
-    padding: 3px 10px;
+    padding: 7px 10px;
 }
 .to-top > img {
     /* margin: 10px auto; */
