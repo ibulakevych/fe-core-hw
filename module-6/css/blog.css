@@ -194,25 +194,20 @@ article img {
 .clearfix p:last-child, p:nth-child(3) {
     text-align: justify;
 }
-.details-button {
-    display: flex;
-    box-sizing: border-box;
-    /* position: absolute; */
-    left: 72px;
-    bottom: 19px;
-    width: 63px;
-    height: 22px;
-    background-color: #fbf6fa;
-    border-radius: 5px;
-    border: 1px solid #9f9696;
-    margin-bottom: 48px;
-}
-.details-button a {
+.clearfix > a {
+    display: block;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
     font-size: 12px;
     margin: auto;
     text-transform: none;
+    text-align: center;
+    width: 63px;
+    background-color: #fbf6fa;
+    border-radius: 5px;
+    border: 1px solid #9f9696;
+    padding: 5px 5px;
+    margin-bottom: 48px;
 }
 article::after {
     content: '';
