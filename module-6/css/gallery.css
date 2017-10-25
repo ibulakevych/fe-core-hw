@@ -50,35 +50,27 @@ header {
     padding: 46px 96px 0;
     box-sizing: border-box;
 }
-.navigation {
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav > ul > li {
+.menu__item {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: baseline; 
+    position: relative;  
 }
-nav > ul > li > a:hover + ul {
-    display: initial;
+.menu__item:hover .submenu {
+    display: block;
 }
-.navigation > li > a {
+.menu__item > a {
     /* font-weight: normal; */
     color: #fff;
     font-size: 28px;
     font-weight: normal;
 }
-.navigation > li > a:hover {
+.menu__item:hover > a {
     color: #263555;
-}
-.navigation > li > a:hover .drop-menu {
-    display: inherit;
-}
-.navigation > li:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* margin-top: -11px; */
 }
 .drop-menu::before {
     /* .triangle-top -- recomended by school*/
@@ -94,22 +86,20 @@ nav > ul > li > a:hover + ul {
     border-color: transparent transparent #fff transparent;
 }
 .drop-menu {
-    margin-top: 37px;
     width: 66px;
     height: 88px;
     position: absolute;
-    /* overflow: hidden; */
-    /* opacity: 0; */
-    display: none;   
+    top: 35px;
     background-color: white;
     text-align: center;
-    padding-top: 16px;
-    /* padding-bottom: 10px; */
+    padding-top: 10px;
     padding-left: 0px;
     box-sizing: border-box;
-    border-radius:5px;
-    z-index: 1;
-    
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     /* position:relative;
     display:inline-block; */
     /* padding:10px;
@@ -118,18 +108,15 @@ nav > ul > li > a:hover + ul {
     margin-right:30px;
     text-align:left; */
 }
-.drop-menu:hover .navigation > li > a {
-    color: #263555;
-}
-/* .drop-menu:hover .drop-menu {
-    display: block;
-} */
-.drop-menu > li > a {
+.submenu > a {
     color: #263555;
     /* font-family: 'Pathway Gothic One', sans-serif; */
     font-size: 20px;
     /* text-decoration: none;
     text-transform: uppercase; */
+}
+.submenu {
+    display: none;
 }
 .wrapper {
     width: 1024px;
