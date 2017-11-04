@@ -410,4 +410,22 @@ body > img {
         width: 84.38vw;
         height: 45.83vw;
     }
+    footer {
+        column-count: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer > a {
+        width: 33%;
+        font-size: 14px;
+        text-align: center;
+    }
+    .contacts {
+        width: 100%;
+        display: flex;
+        justify-content: space-around   ;
+    }
+    .contacts > p, a {
+        font-size: 10px;
+    }
 }    
