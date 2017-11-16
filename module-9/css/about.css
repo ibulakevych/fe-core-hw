@@ -112,6 +112,9 @@ p {
 .submenu {
     display: none;
 }
+.wrapper {
+    width: 100%;
+}
 .main-box {
     width: 100%;
     background-color: #fff;
@@ -139,11 +142,11 @@ ol, ul, .list-block {
     counter-reset:numeral-list-style;
     padding: 0;
 }
-.ordered-list li {
+.ordered-list__li {
     position:relative;
     margin-left: 20px;
 }
-.ordered-list li::before{
+.ordered-list__li::before{
     content:counter(numeral-list-style); /* В качестве данных используем счетчик */
     counter-increment:numeral-list-style; /* Увеличиваем значение счетчика на 1 */
     /* Позиционируем и стилизируем цифры */
@@ -338,6 +341,33 @@ body {
     .drop-menu {
         left:34%;
     }
+    .article-pic {
+        float: left;
+        margin-right: 25.5px;
+        margin-bottom: 25.5px;
+    }
+    .ordered-list__li {
+        margin-left: 0;
+    }
+    .upper-hblock h3 {
+        margin-top: 0;
+    }
+    .ordered-list__li::before {
+        top: 0;
+        left: -25px;
+    }
+    .quote, .quote-sign {
+        margin: 0;
+    }
+    .quote::before {
+        top: 15.9em;
+    }
+    .quote-sign {
+        margin-top: 25px;
+    }
+    /* .footer-nav {
+        column-count: 4;    
+    } */
 }
 
 
@@ -349,9 +379,10 @@ body {
     header li {
         text-align: center;
     }
-    header {
+    .header {
         padding-bottom: 10px;
         max-width: 1024px;
+        margin: 0 auto;
     }
     h2 { 
         /* title 'top destinition' */
@@ -373,10 +404,10 @@ body {
         font-size: 60px;   
     }
     .menu {
-        /* display: flex;
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 0 34px 0; */
+        padding: 0 0 34px 0;
     }
     .menu__item > a {
         font-size: 28px;
@@ -406,6 +437,20 @@ body {
         margin: 0 auto 0;
         padding: 97px 60px 0;    
     }
+    .second-column {
+        padding: 0;
+    }
+    .ordered-list__li {
+        margin-bottom: 35px;
+        padding-left: 35px;
+        padding-right: 0;        
+    }
+    .ordered-list__li:last-child {
+        margin-bottom: 0;
+    }
+    .ordered-list__li::before  {
+        left: 0px;
+    }
     /* .upper-hblock {
         height: auto;
         overflow: hidden;
@@ -424,11 +469,6 @@ body {
         width: 211px;
         float: left;
     } */
-    .article-pic {
-        float: left;
-        margin-right: 25.5px;
-        margin-bottom: 25.5px;
-    }
     /* ol, ul {
         margin-left: 0;
         margin-right: 0;
@@ -458,7 +498,7 @@ body {
     }
     /* variant from habr */
     .quote::before{
-        top: 119px;
+        top: 128px;
     }
     .to-top {
         width: 30px;
@@ -469,9 +509,8 @@ body {
     }
     .footer {
         max-width: 1024px;
-        /* padding: 45px 140px 30px;
-        margin: auto; */
-        column-count: 4;
+        /* padding: 45px 140px 30px; */
+        margin: auto;
     }
     .footer-nav > li > a {
         font-size: 16px;
